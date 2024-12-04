@@ -1,4 +1,5 @@
 import { Button, TextInput } from '@mantine/core';
+import { Link } from 'react-router-dom';
 const ApiConfigForm = () => {
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 mt-[4%]">
@@ -35,6 +36,7 @@ const ApiConfigForm = () => {
             <Button type="submit" fullWidth>
               Submit
             </Button>
+            <Link to="/dashboard">test</Link>
           </div>
         </form>
 
