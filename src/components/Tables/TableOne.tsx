@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo, useContext } from 'react';
 import { MantineReactTable, useMantineReactTable } from 'mantine-react-table';
 import { ApiConfigContext } from '../../context/ApiConfigContext';
 import { useSearchParams } from 'react-router-dom';
-import { Button, Loader } from '@mantine/core';
+import { Badge, Button, Loader } from '@mantine/core';
 import SelectSurveyCard from '../SelectSurveyCard';
 import CardDataStats from '../CardDataStats';
 import { IconList } from '@tabler/icons-react';
@@ -13,10 +13,6 @@ const TableOne = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const { apiconfig } = useContext(ApiConfigContext);
-
-  useEffect(() => {
-    fetchSurveyDetails();
-  }, []);
 
   const [searchParams] = useSearchParams();
 
@@ -98,10 +94,22 @@ const TableOne = () => {
     columns,
     data: tableData,
     enableDensityToggle: false,
+    enableFullScreenToggle: false,
     initialState: {
       pagination: { pageIndex: 0, pageSize: 5 },
       density: 'xs',
     },
+    mantineTableHeadCellProps: {
+      style: {
+        backgroundColor: '#f0f0f0',
+        color: '#333',
+      },
+    },
+    mantinePaginationProps: {
+      showRowsPerPage: true,
+    },
+
+    paginationDisplayMode: 'pages',
   });
 
   if (!uid)
@@ -130,7 +138,7 @@ const TableOne = () => {
             radius="md"
             leftSection={<IconList size={14} />}
           >
-            No of Submission
+            No of Submissions = <span>4</span>
           </Button>
         </div>
       ) : (
