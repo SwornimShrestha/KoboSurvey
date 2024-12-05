@@ -10,13 +10,20 @@ import { MantineProvider } from '@mantine/core';
 
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
+import 'mantine-react-table/styles.css';
+import { ApiConfigProvider } from './context/ApiConfigContext';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Router>
-      <MantineProvider>
-        <App />
-      </MantineProvider>
-    </Router>
+    <ApiConfigProvider>
+      <Router>
+        <MantineProvider>
+          <App />
+          <ToastContainer />
+        </MantineProvider>
+      </Router>
+    </ApiConfigProvider>
   </React.StrictMode>,
 );

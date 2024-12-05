@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import Breadcrumb from '../components/Breadcrumbs/Breadcrumb';
+import { ApiConfigContext } from '../context/ApiConfigContext';
 
 const Calendar = () => {
+  const { apiconfig } = useContext(ApiConfigContext);
+  console.log(apiconfig?.apikey);
   return (
     <>
       <Breadcrumb pageName="Calendar" />
