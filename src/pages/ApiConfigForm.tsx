@@ -6,6 +6,7 @@ import { ApiConfig, ApiConfigContext } from '../context/ApiConfigContext';
 import { useForm } from '@mantine/form';
 
 import { IconCopy } from '@tabler/icons-react';
+import { toast } from 'react-toastify';
 const ApiConfigForm = () => {
   const form = useForm<ApiConfig>({
     initialValues: {
@@ -23,6 +24,7 @@ const ApiConfigForm = () => {
     setApiconfig(values);
     console.log(values);
     navigate('/dashboard');
+    toast.success('Api Config Successfully!!');
   };
   const handleTestCLick = () => {
     form.setFieldValue('apikey', 'e9218ca8da90d8b169ca284cc84ead3bfc81de01');

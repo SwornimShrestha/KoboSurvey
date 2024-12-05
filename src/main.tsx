@@ -21,7 +21,19 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Router>
         <MantineProvider>
           <App />
-          <ToastContainer />
+          <ToastContainer
+            style={{ width: '300px', height: '100px' }}
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
         </MantineProvider>
       </Router>
     </ApiConfigProvider>
