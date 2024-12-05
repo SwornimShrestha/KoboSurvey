@@ -138,7 +138,7 @@ const TableOne = () => {
             radius="md"
             leftSection={<IconList size={14} />}
           >
-            No of Submissions = <span>4</span>
+            No of Submissions : <span>4</span>
           </Button>
         </div>
       ) : (

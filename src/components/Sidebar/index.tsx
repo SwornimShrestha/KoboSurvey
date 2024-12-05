@@ -141,12 +141,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               </div>
             )}
             <ul className="mb-6 flex flex-col gap-1.5">
-              {data.map((item, index) => (
-                <li key={index}>
+              {data.map((item) => (
+                <li key={item.uid}>
                   <NavLink
                     to={`/dashboard?uid=${item.uid}`}
                     className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                      pathname.includes('calendar') &&
+                      pathname.includes(`${item.uid}`) &&
                       'bg-graydark dark:bg-meta-4'
                     }`}
                   >
@@ -170,9 +170,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <div
                   onClick={handleClear}
-                  className={` cursor-pointer group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-sky-500 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes('chart') && 'bg-graydark dark:bg-meta-4'
-                  }`}
+                  className="cursor-pointer group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-red-400 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
                 >
                   <svg
                     className="fill-current"
