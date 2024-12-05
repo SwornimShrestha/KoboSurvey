@@ -22,7 +22,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <MantineProvider>
           <App />
           <ToastContainer
-            style={{ width: '300px', height: '100px' }}
             position="top-center"
             autoClose={5000}
             hideProgressBar={false}
