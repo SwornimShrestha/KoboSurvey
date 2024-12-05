@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-import Logo from '../../images/logo/logo.svg';
+import Logo from '../../images/logo/aster-R.png';
 import { ApiConfigContext } from '../../context/ApiConfigContext';
 import { ActionIcon, rem } from '@mantine/core';
 import { IconCheckbox, IconFile, IconList } from '@tabler/icons-react';
@@ -93,14 +93,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+      className={`absolute left-0 top-0 z-9999 flex h-screen w-69.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
-      <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
+      <div className="flex items-center justify-between gap-2 px-3 bg--800 ">
         <NavLink to="/">
-          <img src={Logo} alt="Logo" />
+          <img src={Logo} alt="Logo" className="w-40" />
         </NavLink>
 
         <button
@@ -127,9 +127,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       </div>
       {/* <!-- SIDEBAR HEADER --> */}
 
-      <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
+      <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear bg--500 ">
         {/* <!-- Sidebar Menu --> */}
-        <nav className="mt-5 py-4 px-4 lg:mt-9 lg:px-6 ">
+        <nav className="mt-5 py-4 px-4 lg:mt-4 lg:px-5  bg--700">
           {/* <!-- Menu Group --> */}
           <div>
             <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
