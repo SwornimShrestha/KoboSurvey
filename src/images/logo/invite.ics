@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+X-LIC-LOCATION:Asia/Singapore
+BEGIN:STANDARD
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:GMT+8
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Singapore:20241206T120000
+DTEND;TZID=Asia/Singapore:20241206T130000
+DTSTAMP:20241205T123309Z
+ORGANIZER;CN=Kathalyst Services:mailto:hello@kathalyst.co
+UID:0j8958lulvbt1h03lfe39m4qil@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=Kathalyst Services;X-NUM-GUESTS=0:mailto:hello@kathalyst.co
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=kenneth@treatsure.co;X-NUM-GUESTS=0:mailto:kenneth@treatsure.co
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=sheraf.lama@kathalyst.co;X-NUM-GUESTS=0:mailto:sheraf.lama@kathalys
+ t.co
+X-GOOGLE-CONFERENCE:https://meet.google.com/qzu-dmxs-xpv
+X-MICROSOFT-CDO-OWNERAPPTID:-1032773829
+CREATED:20241205T123306Z
+DESCRIPTION:Introduction and kickoff meeting between Treatsure and Kathalys
+ t.\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~::~:~::-\nJoin with Google Meet: https://meet.google.com/qzu-dmxs
+ -xpv\nOr dial: (US) +1 518-635-7853 PIN: 202422038#\nMore phone numbers: ht
+ tps://tel.meet/qzu-dmxs-xpv?pin=8456302140078&hs=7\n\nLearn more about Meet
+  at: https://support.google.com/a/users/answer/9282720\n\nPlease do not edi
+ t this section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20241205T123308Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Treatsure-Kathalyst Kickoff
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

@@ -16,7 +16,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   const [error, setError] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
-  const { pathname } = location;
+  const { pathname, search } = location;
 
   const trigger = useRef<any>(null);
   const sidebar = useRef<any>(null);
@@ -146,12 +146,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                   <NavLink
                     to={`/dashboard?uid=${item.uid}`}
                     className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:bg-graydark hover:text-bodydark1 dark:hover:bg-meta-4 ${
-                      pathname.includes(`${item.uid}`) &&
-                      'bg-graydark dark:bg-meta-4'
+                      new URLSearchParams(location.search).get('uid') ===
+                        item.uid && 'bg-graydark text-white dark:bg-meta-4'
                     }`}
                   >
                     <IconCheckbox style={{ width: rem(20), height: rem(20) }} />
-
                     {item.name}
                   </NavLink>
                 </li>

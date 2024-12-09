@@ -68,7 +68,7 @@ const TableOne = () => {
                 '_uuid',
                 '_attachments',
                 '_geolocation',
-                'instanceID',
+                'meta/instanceID',
                 '_validation_status',
               ].includes(header),
           )
